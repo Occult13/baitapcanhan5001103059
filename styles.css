@@ -1,0 +1,74 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB; 
+}
+
+
+.aquarium {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #00bfff; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.fish1 {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    top: 30%;
+    animation: swim 6s linear infinite;
+}
+
+.fish2 {
+    position: absolute;
+    top: 60%;
+    width: 70px;
+    height: 30px;
+    animation: swim 8s linear infinite;
+}
+
+.fish3 {
+    position: absolute;
+    top: 45%;
+    width: 40px;
+    height: 15px;
+    animation: swim 5s linear infinite;
+}
+
+.plant {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    animation: sway 2s infinite alternate ease-in-out;
+}
+
+/* Hiệu ứng cá bơi */
+@keyframes swim {
+    0% {
+        left: -100px;
+        transform: scaleX(1); 
+    }
+    49.9% {
+        left: calc(100% + 100px); 
+        transform: scaleX(1); 
+    }
+    50% {
+        transform: scaleX(-1); 
+    }
+    100% {
+        left: -200px;
+        transform: scaleX(-1); 
+    }
+}
+
